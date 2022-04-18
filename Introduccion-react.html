@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <title>React CDN</title>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+    
+    /* class Saludo extends React.Component{
+        render(){
+            return (
+                <h1>Hola Mundo-Legacy</h1>
+            )
+        }
+    } */
+
+    const Interpolar = () =>{
+        const nombre = "Alan"
+        const [numero,setNumero] = React.useState(0);
+        console.log(numero)
+         setInterval(() => {
+            setNumero(numero+1)
+        }, 1500); 
+        return( 
+            <h1>Hola {nombre}</h1>,
+            <h2>Fecha:{new Date().getFullYear()}</h2>,
+            <p>Numero: {numero}</p>
+        )
+        
+    }
+    const Saludo = () =>{
+        return(
+            <h1>Hola Mundo</h1>
+        )
+    }
+
+    ReactDOM.render(<Interpolar></Interpolar>, document.getElementById('root'));
+        /* ReactDOM.render(React.createElement("ul",null,
+    <div>
+        <ol>
+            <li>Uva</li>
+            <li>Manzana</li>
+            <li>Mango</li>
+        </ol>
+    </div>    ),
+        document.getElementById('root')); */
+    </script>
+</body>
+</html>
